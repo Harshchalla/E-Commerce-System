@@ -31,6 +31,7 @@ The foundational structure of the distributed database is laid out in the schema
 5. **Shipments Table**:
    - Attributes: `shipping_id`, `order_id`, `shipment_date`, `customer_shipping_address`, `customer_region`
    - Primary Key: `shipping_id`
+![Database Schema](assets/Schema.png)
 
 #### Data Insertion Mechanism
 Data is inserted into these tables using Python scripts that leverage the Faker library to generate realistic and random data. The `insert_random_data` function ensures that the data is appropriately distributed across partitions, particularly for the `Products` table, based on the `product_price` field.
@@ -83,8 +84,7 @@ The project also incorporated a NoSQL database, MongoDB, for handling distribute
 
 #### Results
 The MongoDB setup demonstrated effective handling of distributed transactions, ensuring data consistency, integrity, durability, and isolation across multiple nodes.
-
----
+![MongoDB Flow](assets/Mongo.png)---
 
 ### Part 5: NoSQL Implementation in MongoDB
 
